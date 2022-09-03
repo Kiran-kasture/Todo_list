@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% block content%}
+<div class="card mx-auto" style=" margin-top:20px;">
+<article class="card-body  bg-dark">
+<header class="mb-4"><h4 class="card-title text-center"><i class="bi bi-pencil-square"></i> update Todo-List</h4></header>
+<hr>
+<form  method="post" >
+{% csrf_token%}
+<label>Title</label>
+{{form.title}}
+<label>Description</label>
+{{form.description}}
+
+
+<div class="text-center mt-4">
+<button type="submit" class="btn btn-outline-warning btn-block"> ADD  </button>
+ </div>
+</form>
+</article>
+</div>
+{% endblock%}
